@@ -8,7 +8,8 @@ import './Categories.scss';
 const Categories = (props) => {
     
   const {
-    categories
+    categories,
+    selectCategory
   } = props;
 
     return (
