@@ -19,7 +19,7 @@ We also take a look at the Material UI Component Library to help us set up our f
 
 ## Links and Resources
 
-* [CLASS-36: CodeSandbox Link](https://fekf9z-3000.preview.csb.app/)
+* [CLASS-36: CodeSandbox Link](https://1olmp4-3000.preview.csb.app/)
 
 ## UML
 
