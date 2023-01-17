@@ -6,11 +6,10 @@ const Products = (props) => {
     products,
   } = props;
 
-  console.log(props);
+  console.log('PRODUCTS:', props);
 
   return (
     <>
-    <h3>Browse our categories</h3>
     <h2>Products</h2>
     </>
   )
