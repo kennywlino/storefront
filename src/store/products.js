@@ -1,9 +1,4 @@
 const initialState = {
-  categories: [
-    { name: 'electronics', displayName: 'Electronics' },
-    { name: 'food', displayName: 'Food' },
-    { name: 'clothing', displayName: 'Clothing' },
-  ],
   products: [
     { name: 'TV', category: 'electronics', price: 699.00, inStock: 5 },
     { name: 'Radio', category: 'electronics', price: 99.00, inStock: 15 },
@@ -13,7 +8,6 @@ const initialState = {
     { name: 'Eggs', category: 'food', price: 1.99, inStock: 12 },
     { name: 'Bread', category: 'food', price: 2.39, inStock: 90 },
   ],
-  activeCategory: '',
 };
 
 function productsReducer(state = initialState, action) {
