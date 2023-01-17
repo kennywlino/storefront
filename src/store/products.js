@@ -14,13 +14,20 @@ function productsReducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch(type) {
-  case 'INCREMENT':
-    return {};
-  case 'DECREMENT':
-    return {};
+  case 'FILTERED':
+    return {
+        products: state.products.filter(product => product.category === payload.category)
+    };
   default:
     return state;
   }
 }
+
+  export const filterProducts = (category) => {
+    return {
+      type: 'FILTERED',
+      payload: category
+    }
+  }
 
 export default productsReducer;

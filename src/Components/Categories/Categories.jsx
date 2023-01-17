@@ -1,24 +1,30 @@
-import { connect } from "react-redux"
+import React from 'react';
+import { connect } from 'react-redux';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
+import './Categories.scss';
 
 const Categories = (props) => {
     
-    const {
-        categories
-    } = props;
+  const {
+    categories
+  } = props;
 
-    console.log('CATEGORIES:', props);
+    function handleClick(category) {
+        console.log(category, 'clicked');
+    }
 
     return (
-        <>
-        <h3>Browse our Categories</h3>
-        {
-        categories.map((category, index) => (
-          <div key={`category-${index}`}>
-            <h5>{category.name}</h5>
-          </div>
-        ))
-      }
-        </>
+        <div className="breadcrumbs" role="presentation">
+          <h3>Browse our Categories</h3>
+          <Breadcrumbs separator="|" aria-label="breadcrumb">
+            {
+            categories.map((category, index) => (
+                <Link underline="hover" color="blue" onClick={() => handleClick(category.name)} key={`category-${index}`}>{category.displayName}</Link>
+            ))
+            }
+          </Breadcrumbs>
+        </div>
     )
 }
 
