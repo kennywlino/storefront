@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# LAB - CLASS 35 - 38
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project: Virtual Store -- Application State with Redux
 
-## Available Scripts
+## Author: Kenny W. Lino
 
-In the project directory, you can run:
+## Problem Domain
 
-### `npm start`
+In this lab, we begin working with Redux in order to store global state information in a Virtual Store app. We are tasked to build this app from scratch using the lab directions and following visual as a guide.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  ![Store Preview](https://codefellows.github.io/code-401-javascript-guide/curriculum/class-36/lab/preview.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+With Redux, we store state data about the categories and products in our virtual store. This is done by creating a Redux store (not to be confused with the app virtual store) and defining a number of reducers for categories and products and our active category and dispatch functions to modify the state for these reducers.
 
-### `npm test`
+After setting up these reducers, we wrap our App with a Provider (like the React Provider API) and pass it our store() function created within the index of our store. This is one of the steps that allows our child components to gain access to the data within our store. From there, we bring in the appropriate data into our components and set up a mapStateToProps and mapDispatchToProps function which is passed to the react-redux connect() function to complete our component access to the data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We also take a look at the Material UI Component Library to help us set up our front-end. We bring in a number of components over the span of the project, including the AppBar for the Header component and the Breadcrumbs component to display our product categories.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Links and Resources
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* [CLASS-36: CodeSandbox Link](https://1olmp4-3000.preview.csb.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## UML
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![CLASS-36 UML](./assets/CLASS-36_Virtual_Store.excalidraw.png)
