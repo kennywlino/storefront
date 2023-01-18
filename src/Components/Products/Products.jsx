@@ -24,7 +24,7 @@ const Products = (props) => {
           return (
             <Grid xs={4} key={`product-grid-${index}`}>
               <Card 
-              key={`product-${index}`} d
+              key={`product-${index}`}
               variant="outlined" 
               sx={{ maxWidth: "20rem", height: "20rem"}}>
                 <CardContent>
