@@ -17,6 +17,7 @@ function productsReducer(state = initialState, action) {
         initialState.filter(product => product.category === payload.name)
       )
     case 'DECREMENT_STOCK':
+      console.log('inside DECREMENT_STOCK');
       return (
         state.map(product => product.name === payload.name ? 
           {

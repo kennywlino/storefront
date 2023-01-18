@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { decrementStock } from '../../store/actions';
 import { Box, Button, Card, CardActions, CardContent, Container, Typography } from '@mui/material';
 import { maxHeight } from '@mui/system';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -9,7 +10,8 @@ const Products = (props) => {
 
   const {
     products,
-    activeCategory
+    activeCategory,
+    decrementStock
   } = props;
 
   return (
@@ -27,7 +29,7 @@ const Products = (props) => {
                     {product.name}
                   </Typography>
                   <CardActions>
-                    <Button size="small">Add to Cart</Button>
+                    <Button size="small" onClick={() => decrementStock(product)}>Add to Cart</Button>
                     <Button size="small">View Details</Button>
                   </CardActions>
                 </CardContent>
@@ -46,6 +48,9 @@ const mapStateToProps = ({ products, activeCategory }) => {
         activeCategory: activeCategory
     }
 }
+const mapDispatchToProps = {
+  decrementStock
+}
 
 
-export default connect(mapStateToProps)(Products);
+export default connect(mapStateToProps, mapDispatchToProps)(Products);
