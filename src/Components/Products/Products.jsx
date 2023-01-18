@@ -23,9 +23,12 @@ const Products = (props) => {
       {activeCategory && products.map((product, index) => {
           return (
             <Grid xs={4} key={`product-grid-${index}`}>
-              <Card key={`product-${index}`} variant="outlined" sx={{ maxWidth: "20rem", height: "20rem"}}>
+              <Card 
+              key={`product-${index}`} d
+              variant="outlined" 
+              sx={{ maxWidth: "20rem", height: "20rem"}}>
                 <CardContent>
-                  <Typography variant="h6" component="div">
+                  <Typography variant="h6" component="div" data-testid={`product-${index}`} >
                     {product.name}
                   </Typography>
                   <CardActions>
