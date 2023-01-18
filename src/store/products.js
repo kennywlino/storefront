@@ -16,6 +16,16 @@ function productsReducer(state = initialState, action) {
       return (
         initialState.filter(product => product.category === payload.name)
       )
+    case 'DECREMENT_STOCK':
+      return (
+        state.map(product => product.name === payload.name ? 
+          {
+            name: product.name,
+            category: product.category,
+            price: product.price,
+            inStock: product.inStock - 1,
+          } : product)
+      )
     case 'RESET':
       return initialState;
     default: 
