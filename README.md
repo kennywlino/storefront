@@ -16,10 +16,15 @@ After setting up these reducers, we wrap our App with a Provider (like the React
 
 We also take a look at the Material UI Component Library to help us set up our front-end. We bring in a number of components over the span of the project, including the AppBar for the Header component and the Breadcrumbs component to display our product categories.
 
+In CLASS-37, we split the logic for our products from one reducer into individual reducers that manage products, cart, categories and our active category. We also globalize the actions for our Redux store by moving them into a single file. When an action such as `SELECT_CATEGORY` is selected, this will trigger actions on any reducer that has that action as a possible type. In this case, this would trigger actions for our active category and our products to filter only the relevant items.
+
+We also add a new component for our cart to display info about products the user has added. This currently shows the number of items added as well as the list of items in the cart.
+
 
 ## Links and Resources
 
 * [CLASS-36: CodeSandbox Link](https://1olmp4-3000.preview.csb.app/)
+* [CLASS-37 CodeSandbox Link](https://gw8zvn-3000.preview.csb.app/)
 
 ## UML
 
