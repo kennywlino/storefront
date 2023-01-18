@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectCategory } from '../../store/reducer';
+import { selectCategory } from '../../store/actions';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import './Categories.scss';
@@ -18,7 +18,7 @@ const Categories = (props) => {
           <Breadcrumbs separator="|" aria-label="breadcrumb">
             {
             categories.map((category, index) => (
-                <Link underline="hover" color="blue" onClick={() => selectCategory(category.name)} key={`category-${index}`}>{category.displayName}</Link>
+                <Link underline="hover" color="blue" onClick={() => selectCategory(category)} key={`category-${index}`}>{category.displayName}</Link>
             ))
             }
           </Breadcrumbs>
@@ -28,9 +28,9 @@ const Categories = (props) => {
 
 
 
-const mapStateToProps = ({ products }) => {
+const mapStateToProps = ({ categories }) => {
   return {
-      categories: products.categories,
+      categories: categories,
   }
 }
 
