@@ -18,7 +18,7 @@ const Categories = (props) => {
           <Breadcrumbs separator="|" aria-label="breadcrumb">
             {
             categories.map((category, index) => (
-                <Link underline="hover" color="blue" onClick={() => selectCategory(category.name)} key={`category-${index}`}>{category.displayName}</Link>
+                <Link underline="hover" color="blue" onClick={() => selectCategory(category)} key={`category-${index}`}>{category.displayName}</Link>
             ))
             }
           </Breadcrumbs>

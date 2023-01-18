@@ -23,8 +23,8 @@ const reducer = (state = initialState, action) => {
     case 'SELECT_CATEGORY':
       return {
         ...state,
-        activeCategory: payload,
-        products: initialState.products.filter(product => product.category === payload)
+        activeCategory: payload.displayName,
+        products: initialState.products.filter(product => product.category === payload.name)
       }
     case 'RESET':
       return initialState;
@@ -34,6 +34,7 @@ const reducer = (state = initialState, action) => {
 }
 
 export const selectCategory = (category) => {
+  console.log(category);
   return {
     type: 'SELECT_CATEGORY',
     payload: category,
