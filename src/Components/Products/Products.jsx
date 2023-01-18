@@ -14,7 +14,7 @@ const Products = (props) => {
 
   return (
     <div className="productsGrid">
-      <Typography variant="h2" textAlign="center" mb="1rem" typography={{"text-transform": "uppercase"}}>
+      <Typography variant="h2" textAlign="center" mb="1rem" typography={{"textTransform": "uppercase"}}>
         {activeCategory}
       </Typography>
       <Grid container spacing={3}>
@@ -40,10 +40,10 @@ const Products = (props) => {
   )
 };
 
-const mapStateToProps = ({ products }) => {
+const mapStateToProps = ({ products, activeCategory }) => {
     return {
-        products: products.products,
-        activeCategory: products.activeCategory
+        products: products,
+        activeCategory: activeCategory
     }
 }
 

@@ -34,7 +34,6 @@ const reducer = (state = initialState, action) => {
 }
 
 export const selectCategory = (category) => {
-  console.log(category);
   return {
     type: 'SELECT_CATEGORY',
     payload: category,

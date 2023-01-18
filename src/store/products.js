@@ -1,5 +1,4 @@
-const initialState = {
-  products: [
+const initialState = [
     { name: 'TV', category: 'electronics', price: 699.00, inStock: 5 },
     { name: 'Radio', category: 'electronics', price: 99.00, inStock: 15 },
     { name: 'Shirt', category: 'clothing', price: 9.00, inStock: 25 },
@@ -7,27 +6,21 @@ const initialState = {
     { name: 'Apples', category: 'food', price: .99, inStock: 500 },
     { name: 'Eggs', category: 'food', price: 1.99, inStock: 12 },
     { name: 'Bread', category: 'food', price: 2.39, inStock: 90 },
-  ],
-};
+  ]
 
 function productsReducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch(type) {
-  case 'FILTERED':
-    return {
-        products: state.products.filter(product => product.category === payload.category)
-    };
-  default:
-    return state;
+    case 'SELECT_CATEGORY':
+      return (
+        initialState.filter(product => product.category === payload.name)
+      )
+    case 'RESET':
+      return initialState;
+    default: 
+      return state
   }
 }
-
-  export const filterProducts = (category) => {
-    return {
-      type: 'FILTERED',
-      payload: category
-    }
-  }
 
 export default productsReducer;

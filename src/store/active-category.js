@@ -1,18 +1,15 @@
+const initialState = '';
 
-const initialState = {
-  activeCategory: '',
-};
-
-function activeCategoryReducer(state = initialState, action) {
+function activeCategoryReducer (state = initialState, action) {
   const { type, payload } = action;
 
   switch(type) {
-  case 'INCREMENT':
-    return {};
-  case 'DECREMENT':
-    return {};
-  default:
-    return state;
+    case 'SELECT_CATEGORY':
+      return payload.displayName;
+    case 'RESET':
+      return initialState;
+    default: 
+      return state
   }
 }
 

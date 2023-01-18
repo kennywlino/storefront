@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectCategory } from '../../store/reducer';
+import { selectCategory } from '../../store/actions';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import './Categories.scss';
@@ -28,9 +28,9 @@ const Categories = (props) => {
 
 
 
-const mapStateToProps = ({ products }) => {
+const mapStateToProps = ({ categories }) => {
   return {
-      categories: products.categories,
+      categories: categories,
   }
 }
 
