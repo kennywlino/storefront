@@ -18,3 +18,10 @@ export const decrementStock = (product) => {
     payload: product
   }
 }
+
+export const incrementStock = (product) => {
+  return {
+    type: 'INCREMENT_STOCK',
+    payload: product
+  }
+}
