@@ -27,7 +27,7 @@ In CLASS-38, we replace the hard-coded categories and products in our reducers w
 
 * [CLASS-36: CodeSandbox Link](https://1olmp4-3000.preview.csb.app/)
 * [CLASS-37: CodeSandbox Link](https://gw8zvn-3000.preview.csb.app/)
-* [CLASS-38: CodeSandbox Link]()
+* [CLASS-38: CodeSandbox Link](https://5wmsfr-3000.preview.csb.app/)
 
 ## UML
 
