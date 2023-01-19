@@ -22,7 +22,7 @@ const Header = (props) => {
                 <Toolbar>
                     <Typography variant="h4" component="div" sx={{ flexGrow: 1, textTransform: 'uppercase', color: 'black' }}>Our Store</Typography>
                     <Button sx={{ color:'black' }} onClick={() => setShowCart(!showCart)}>{`Cart (${cart.length})`}</Button>
-                    {showCart /* && <SimpleCart /> */}
+                    {showCart && <SimpleCart />}
                 </Toolbar>
             </AppBar>
         </Box>
