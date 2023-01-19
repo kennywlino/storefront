@@ -5,7 +5,7 @@ function activeCategoryReducer (state = initialState, action) {
 
   switch(type) {
     case 'SELECT_CATEGORY':
-      return payload.displayName;
+      return payload.name;
     case 'RESET':
       return initialState;
     default: 

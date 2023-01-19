@@ -20,11 +20,14 @@ In CLASS-37, we split the logic for our products from one reducer into individua
 
 We also add a new component for our cart to display info about products the user has added. This currently shows the number of items added as well as the list of items in the cart.
 
+In CLASS-38, we replace the hard-coded categories and products in our reducers with data collected from an external API. We do this by setting up the Redux middleware, thunk, which allows our reducer to call the API and set the data in state by calling the appropriate action after the promise is fulfilled. Using this functionality, we keep our inventory held in the database in sync with our app when users add new items to their cart.  
+
 
 ## Links and Resources
 
 * [CLASS-36: CodeSandbox Link](https://1olmp4-3000.preview.csb.app/)
-* [CLASS-37 CodeSandbox Link](https://gw8zvn-3000.preview.csb.app/)
+* [CLASS-37: CodeSandbox Link](https://gw8zvn-3000.preview.csb.app/)
+* [CLASS-38: CodeSandbox Link](https://5wmsfr-3000.preview.csb.app/)
 
 ## UML
 

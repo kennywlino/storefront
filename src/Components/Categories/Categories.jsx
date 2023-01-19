@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { selectCategory } from '../../store/actions';
+import { getCategories } from '../../store/categories';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import './Categories.scss';
 
 const Categories = (props) => {
-    
+
   const {
     categories,
-    selectCategory
+    selectCategory,
+    getCategories
   } = props;
+
+  useEffect(() => {
+    getCategories();
+  }, []);
 
     return (
         <div className="breadcrumbs" role="presentation">
@@ -25,7 +31,7 @@ const Categories = (props) => {
                   key={`category-${index}`}
                   data-testid={`category-${index}`}
                   >
-                  {category.displayName}
+                  {category.name.toUpperCase()}
                 </Link>
             ))
             }
@@ -44,6 +50,7 @@ const mapStateToProps = ({ categories }) => {
 
 const mapDispatchToProps = {
   selectCategory,
+  getCategories
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Categories);
