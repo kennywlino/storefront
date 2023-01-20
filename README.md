@@ -22,6 +22,9 @@ We also add a new component for our cart to display info about products the user
 
 In CLASS-38, we replace the hard-coded categories and products in our reducers with data collected from an external API. We do this by setting up the Redux middleware, thunk, which allows our reducer to call the API and set the data in state by calling the appropriate action after the promise is fulfilled. Using this functionality, we keep our inventory held in the database in sync with our app when users add new items to their cart.  
 
+In CLASS-39, we close out this application by adding a few last components. We include a router to navigate the various products in our store. We also integrate a product details page that allows us to show detailed information per product. Finally, we add a page to be able to show detailed shopping cart information to prepare to submit orders. 
+
+Aside from these additional features, we also take advantage of the Redux Toolkit and refactor some of the older legacy code we brought in in earlier labs.
 
 ## Links and Resources
 
