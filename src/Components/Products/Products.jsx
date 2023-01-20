@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { decrementStock } from '../../store/actions';
 import { Box, Button, Card, CardActions, CardContent, Container, Typography } from '@mui/material';
-import { maxHeight } from '@mui/system';
 import Grid from '@mui/material/Unstable_Grid2';
 import './Products.scss';
+import { getProducts } from '../../store/products'; 
+import { useDispatch } from 'react-redux';
 
 const Products = (props) => {
+  const dispatch = useDispatch();
 
   const {
     products,
     activeCategory,
     decrementStock
   } = props;
+
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
 
   return (
     <div className="productsGrid">
